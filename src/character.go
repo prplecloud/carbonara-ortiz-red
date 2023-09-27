@@ -3,17 +3,18 @@ package red
 import "fmt"
 
 type Character struct {
-	name string
-	class string
-	level int
-	health_max int
-	current_health int
-	inventory map[string]int
-	skills []string
-	golds int
-	Equipment string
+	name              string
+	class             string
+	level             int
+	health_max        int
+	current_health    int
+	inventory         map[string]int
+	skills            []string
+	golds             int
+	equipment         Equipment
 	inventoryCapacity int
 	inventoryUpgrades int
+	initiative        int
 }
 
 var nickname string
@@ -21,11 +22,11 @@ var nickname string
 func main() {
 	var m1 Shop
 
-	m1.items = map[string]int{"Hp Potion" : 1, "Poison Potion" : 1, "SpellBook : FireBall" : 1}
+	m1.items = map[string]int{"Hp Potion": 1, "Poison Potion": 1, "SpellBook : FireBall": 1}
 	m1.price = 0
 	m1.quantity = 1
 }
-	
+
 func (c *Character) Init(name string, class string, level int, health_max int, current_health int, inventory map[string]int, skills []string, golds int) {
 	c.name = name
 	c.class = class
@@ -35,9 +36,9 @@ func (c *Character) Init(name string, class string, level int, health_max int, c
 	c.inventory = inventory
 	c.skills = skills
 	c.inventoryCapacity = 10
-    c.inventoryUpgrades = 0
-}
+	c.inventoryUpgrades = 0
 
+}
 
 func (c *Character) DisplayInfo() {
 	fmt.Println("	INFOS			")
@@ -55,29 +56,28 @@ func (c Character) AccessInventory() {
 	fmt.Println("	INVENTORY			")
 	fmt.Println("")
 	fmt.Println("Max : ", c.inventoryCapacity)
-	for i := range c.inventory { 
+	for i := range c.inventory {
 		fmt.Println("You have", c.inventory[i], i, ".")
 	}
 	var choice int
 
-fmt.Println("1. Equip head")
-fmt.Println("2. Equip body")
-fmt.Println("3. Equip foot")
-fmt.Println("")
-fmt.Println("")
-fmt.Println("9. Back to menu")
+	fmt.Println("1. Equip head")
+	fmt.Println("2. Equip body")
+	fmt.Println("3. Equip foot")
+	fmt.Println("")
+	fmt.Println("")
+	fmt.Println("9. Back to menu")
 
+	fmt.Scan(&choice)
 
-fmt.Scan(&choice)
+	switch choice {
+	case 1:
+	///Equipe head
+	case 2:
+		///Equip body
+	case 3:
+		///Equip boots
 
-switch choice {
-case 1: 
-///Equipe head
-case 2:
-	///Equip body
-case 3:
-	///Equip boots
-
-}
+	}
 
 }

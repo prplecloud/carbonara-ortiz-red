@@ -1,0 +1,5 @@
+package red
+
+func GoblinPattern() {
+
+}
