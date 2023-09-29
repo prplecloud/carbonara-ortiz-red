@@ -44,4 +44,3 @@ func Menu1(c1 *Character, m1 *Shop, g1 *Goblin) {
 		fmt.Println("Choice is not valid. Please choose a valid option")
 	}
 }
-	

@@ -24,8 +24,8 @@ func (g *Goblin) GobDeath(c *Character) {
 			c.LevelUp()
 		}
 		fmt.Println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-		Menu1(&c1, &m1, &g1)
 	}
+	Menu1(&c1, &m1, &g1)
 }
 
 func EnnemyDead(g *Goblin) bool {

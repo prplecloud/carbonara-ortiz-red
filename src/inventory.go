@@ -169,7 +169,7 @@ func (c Character) AddInventory(item string) {
 			fmt.Println("You have", c.inventory[i], i, ".")
 		}
 	}
-}	
+}
 
 func (c Character) RemoveInventory(item string) {
 	c.inventory[item] = c.inventory[item] - 1
@@ -204,4 +204,3 @@ func (c *Character) MaxItem() bool {
 		return true
 	}
 }
-

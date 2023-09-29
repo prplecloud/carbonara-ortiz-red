@@ -30,10 +30,10 @@ type Equipment struct {
 	head string
 	body string
 	feet string
-	}
+}
 
 type Shop struct {
 	items    map[string]int
 	price    int
 	quantity int
-	}
+}

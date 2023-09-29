@@ -2,7 +2,7 @@ package red
 
 import "fmt"
 
-func (c Character) BlackSmith() {
+func (c *Character) BlackSmith() {
 	fmt.Print("\033[H\033[2J")
 	fmt.Println("			BLACKSMITH")
 	fmt.Println("1. Craft an Adventurer's hat [1 Raven feather, 1 wild boar leather]")

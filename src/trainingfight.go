@@ -41,7 +41,6 @@ func (c *Character) PlayerRound(g *Goblin) {
 	fmt.Println("1. Normal attack  [-5 HP]")
 	fmt.Println("2. SPELLS")
 	fmt.Println("3. INVENTORY")
-	fmt.Println("4. Run Away")
 	fmt.Println("------------------------------------")
 
 	fmt.Scan(&choice)
@@ -95,7 +94,7 @@ func (c *Character) Attack(g *Goblin) {
 }
 
 func (c *Character) HasEnoughMana(manaCost int) bool {
-    return c.mana >= manaCost
+	return c.mana >= manaCost
 }
 
 func TrainingFight(c *Character, g *Goblin) {
@@ -130,7 +129,5 @@ func TrainingFight(c *Character, g *Goblin) {
 	} else {
 		c.Death()
 	}
-
 	Menu1(&c1, &m1, &g1)
 }
-
